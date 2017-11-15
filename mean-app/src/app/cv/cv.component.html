@@ -1,0 +1,56 @@
+<div id="fullpage">
+    <div id="header" class="section">
+        <div id="particles-js"></div>
+        <nav id="menu">
+            <a href="cv/#start">
+                <div class="logo" data-menuanchor="start">
+                    <img src="/assets/images/logo.png">
+                </div>
+            </a>
+            <a href="cv/#experiences">
+                <div class="menu-button">
+                    <p data-menuanchor="experiences">
+                        Experiences
+                    </p>
+                </div>
+            </a>
+            <a href="javascript:void(0);">
+                <div class="menu-button">
+                    <p data-menuanchor="">
+                        Additional Skills
+                    </p>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <div>&#9776;</div>
+            </a>
+        </nav>
+        <div id="header-content">
+            <div id="header-text">
+                <h1>Philip Ekblom</h1>
+                <p>Engineer Student at KTH in Computer Science</p>
+                <a></a>
+            </div>
+            <div id="portrait-wrapper">
+                <img src="/assets/images/portrait.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div *ngFor="let experience of experiences" class="slide experience-box">
+            <div class="experience-container">
+                <h2>Experiences</h2>
+                <h3 class="xp-category">{{experience.category}}</h3>
+                <div class="experience-wrapper" *ngFor="let item of experience.items">
+                    <div class="xp-title">
+                        <h4>{{item.title}}</h4>
+                    </div>
+                    <div class="xp-raiting" title="{{xpMsg[item.xp]}}">
+                        <div *ngFor="let key of item.xp | loopNumber"></div>
+                    </div>
+                    <div class="xp-text">{{item.xp * 25}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

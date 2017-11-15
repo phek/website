@@ -1,0 +1,359 @@
+#menu {
+    top: 0;
+    position: absolute;
+    width: calc(100% - 60px);
+    padding: 15px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    animation: fadein 2s;
+}
+
+#menu img {
+    height: 40px;
+}
+
+#menu div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#menu p {
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+}
+
+#menu a:not(:first-child):not(:last-child) {
+    margin-right: 20px;
+}
+
+#menu a:first-child {
+    margin-right: 40px;
+}
+
+#menu a, #menu a:active, #menu a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu p.active {
+    border-bottom: 2px solid #fff;
+}
+
+.menu-button {
+    border: 2px solid #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    border-top: none !important;
+    border-bottom: none !important;
+    margin-top: 0px !important;
+    line-height: 0;
+}
+
+#menu .icon {
+    display: none;
+}
+
+#header {
+    background-color: #40b4b3;
+    background: linear-gradient(#40b4b3, #409fb4);
+    width: 100%;
+    position: relative;
+    color: #fff;
+}
+
+#header-content {
+    text-align: center;
+}
+
+#header-text {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    animation: fadein-up 2s;
+}
+
+#header-text p {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#lines {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.1;
+}
+
+#portrait-wrapper {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(64, 169, 179);
+    display: inline-block;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 99;
+    position: relative;
+    border: 4px solid #fff;
+    vertical-align: middle;
+    box-shadow: 0px 0px 6px #000;
+    animation: fadein 2s;
+}
+
+#portrait-wrapper img {
+    height: 100%;
+}
+
+.experience-box {
+    color: #fff;
+    animation: fadein-up 2s;
+}
+
+.experience-box:nth-child(8n - 7) {
+    background-color: #56aabd;
+    background: linear-gradient(to bottom right, #56aabd, #4f73c5);
+}
+
+.experience-box:nth-child(8n - 6) {
+    background-color: #3eb3a2;
+    background: linear-gradient(to bottom right, #3eb3a2, #3e8db3);
+}
+
+.experience-box:nth-child(8n - 5) {
+    background-color: #d26899;
+    background: linear-gradient(to bottom right, #d26899, #ca6868);
+}
+
+.experience-box:nth-child(8n - 4) {
+    background-color: #ad68d2;
+    background: linear-gradient(to bottom right, #ae68d2, #8068ca);
+}
+
+.experience-box:nth-child(8n - 3) {
+    background-color: #8f99d8;
+}
+
+.experience-box:nth-child(8n - 2) {
+    background-color: #aa7cce;
+}
+
+.experience-box:nth-child(8n - 1) {
+    background-color: #da90c8;
+}
+
+.experience-box:nth-child(8n) {
+    background-color: #e681b1;
+}
+
+.experience-box:nth-child(4n), .experience-box:last-child {
+    margin-right: 0;
+}
+
+.experience-box h2 {
+    margin-top: -100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.experience-box h3 {
+    margin-bottom: 5px;
+}
+
+.experience-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.experience-wrapper {
+    margin-bottom: 5px;
+}
+
+.xp-category {
+    margin-left: 200px;
+}
+
+.xp-title {
+    display: inline-block;
+    text-align: right;
+    width: 190px;
+    margin-right: 5px;
+}
+
+.xp-raiting {
+    display: inline-block;
+    width: calc(100% - 385px);
+    height: 13px;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.xp-raiting div {
+    height: 100%;
+    width: 25%;
+    float: left;
+    animation: xp-rise 5s;
+}
+
+.xp-raiting div:last-child {
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+}
+
+.xp-raiting div:nth-child(2), .xp-raiting div:nth-child(3), .xp-raiting div:nth-child(4) {
+    margin-left: -1px;
+    width: calc(25% + 1px);
+}
+
+.xp-raiting div:nth-child(1) {
+    background-color: #ff7d7d;
+    background: linear-gradient(to right, #ff7d7d, #ffc47d);
+}
+
+.xp-raiting div:nth-child(2) {
+    background-color: #ffc47d;
+    background: linear-gradient(to right, #ffc47d, #fff47d);
+}
+
+.xp-raiting div:nth-child(3) {
+    background-color: #fff47d;
+    background: linear-gradient(to right, #fff47d, #dfff7d);
+}
+
+.xp-raiting div:nth-child(4) {
+    background-color: #bef991;
+    background: linear-gradient(to right, #dfff7d, #bef991);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.xp-text {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #fff;
+    margin-left: 2px;
+    vertical-align: top;
+    font-family: 'Raleway', sans-serif;
+}
+
+.box {
+    padding: 20px 0;
+    animation: fadein 2s;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadein 5s;
+}
+
+@keyframes xp-rise {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #menu a {display: none;}
+    #menu a.icon {
+        float: right;
+        display: block;
+        font-size: 35px;
+        margin-top: 5px;
+    }
+
+    #menu {
+        width: calc(100% - 40px);
+        padding: 15px 20px;
+    }
+
+    #particles-js {
+        display: none;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    #header-text {
+        margin-right: 0;
+    }
+
+    #portrait-wrapper {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .experience-box h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .experience-container {
+        width: 60%;
+    }
+
+    .xp-category {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 15px !important;
+    }
+
+    .xp-title {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+
+    .xp-raiting {
+        display: block;
+        width: 100%;
+        height: 6px;
+        border-radius: 10px;
+    }
+
+    .xp-text {
+        display: block;
+        text-align: right;
+    }
+
+    .fp-controlArrow.fp-prev {
+        border-width: 28px 24px 28px 0;
+    }
+
+    .fp-controlArrow.fp-next {
+        border-width: 28px 0 28px 24px;
+    }
+
+    .fp-controlArrow {
+        margin-top: -28px;
+    }
+}
