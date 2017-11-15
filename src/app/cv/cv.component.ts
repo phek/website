@@ -26,7 +26,7 @@ export class CvComponent implements AfterViewInit {
             anchors: ['start', 'experiences'],
             menu: '#menu'
         });
-        particlesJS.load('particles-js', '/assets/scripts/particlesJS/particlesjs-config.json');
+        particlesJS.load('particles-js', 'assets/scripts/particlesJS/particlesjs-config.json');
     }
 
 }
