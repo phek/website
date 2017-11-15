@@ -6,7 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng build && node server.js",
-    "test": "ng test"
+    "test": "ng test",
+    "github-page": "ng github-pages:deploy"
   },
   "private": true,
   "dependencies": {
