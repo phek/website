@@ -1,0 +1,5 @@
+Setup angular:
+https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
+
+Particles:
+http://vincentgarreau.com/particles.js/
