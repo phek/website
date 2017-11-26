@@ -296,6 +296,10 @@
         font-size: 1em;
     }
 
+    .container {
+        width: 65%;
+    }
+
     #header-text {
         margin-right: 0;
     }
@@ -342,14 +346,10 @@
     }
 
     .fp-controlArrow.fp-prev {
-        border-width: 28px 24px 28px 0;
+        border-width: 22px 18px 22px 0;
     }
 
     .fp-controlArrow.fp-next {
-        border-width: 28px 0 28px 24px;
-    }
-
-    .fp-controlArrow {
-        margin-top: -28px;
+        border-width: 22px 0 22px 18px;
     }
 }
