@@ -131,13 +131,13 @@
     background: linear-gradient(to bottom right, #ae68d2, #8068ca);
 }
 
-.bg-box h2 {
+.bg-box h2, .bg-box-rev h2 {
     margin-top: -100px;
     margin-bottom: 40px;
     text-align: center;
 }
 
-.bg-box h3, .bg-box-rev h2 {
+.bg-box h3, .bg-box-rev h3 {
     margin-bottom: 5px;
 }
 
@@ -257,7 +257,7 @@
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
 
     #menu a {display: none;}
     #menu a.icon {
