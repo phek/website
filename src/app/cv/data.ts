@@ -1,3 +1,31 @@
+export const ADDITIONAL = [
+    "Driving License",
+    "Fluent English"
+];
+
+export const EDUCATION = [
+    {
+        "school": "KTH Kista",
+        "area": "Computer Science Engineering",
+        "individual": [
+            "Ethical Hacking",
+            "Human Computer Interaction (HCI)",
+            "Computer Graphics"
+        ]
+    },
+    {
+        "school": "Nacka Gymnasium",
+        "area": "Computer Technology",
+        "individual": [
+            "Psychology",
+            "Economy",
+        ],
+        "extras": [
+            "Cisco Network Certificate"
+        ]
+    }
+];
+
 export const EXPERIENCES = [
     {
         "category": "Website languages",

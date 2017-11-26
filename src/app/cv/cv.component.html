@@ -14,9 +14,16 @@
                     </p>
                 </div>
             </a>
-            <a href="javascript:void(0);">
+            <a href="#education">
                 <div class="menu-button">
-                    <p data-menuanchor="">
+                    <p data-menuanchor="education">
+                        Education
+                    </p>
+                </div>
+            </a>
+            <a href="#additional-skills">
+                <div class="menu-button">
+                    <p data-menuanchor="additional-skills">
                         Additional Skills
                     </p>
                 </div>
@@ -28,8 +35,7 @@
         <div id="header-content">
             <div id="header-text">
                 <h1>Philip Ekblom</h1>
-                <p>Engineer Student at KTH in Computer Science</p>
-                <a></a>
+                <p>Computer Science Engineering student at KTH</p>
             </div>
             <div id="portrait-wrapper">
                 <img src="assets/images/portrait.jpg">
@@ -37,8 +43,8 @@
         </div>
     </div>
     <div class="section">
-        <div *ngFor="let experience of experiences" class="slide experience-box">
-            <div class="experience-container">
+        <div *ngFor="let experience of experiences" class="slide bg-box">
+            <div class="container">
                 <h2>Experiences</h2>
                 <h3 class="xp-category">{{experience.category}}</h3>
                 <div class="experience-wrapper" *ngFor="let item of experience.items">
@@ -50,6 +56,39 @@
                     </div>
                     <div class="xp-text">{{item.xp * 25}}%</div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div *ngFor="let education of educations" class="slide bg-box-rev">
+            <div class="container">
+                <div class="education-wrapper">
+                    <h2>Education</h2>
+                    <h3 class="education-title">{{education.school}}</h3>
+                    <p class="education-subtitle">{{education.area}}</p>
+                    <div class="education-container">
+                        <h4>Individual Courses</h4>
+                        <li *ngFor="let individual of education.individual">
+                            {{individual}}
+                        </li>
+                    </div>
+                    <div *ngIf="education.extras" class="education-container">
+                        <h4>Extras</h4>
+                        <li *ngFor="let extra of education.extras">
+                            {{extra}}
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section bg-box-rev">
+        <div class="container">
+            <div class="additional-wrapper">
+                <h2>Additional Skills</h2>
+                <p *ngFor="let skill of additional">
+                    {{skill}}
+                </p>
             </div>
         </div>
     </div>

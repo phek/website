@@ -106,68 +106,64 @@
     height: 100%;
 }
 
-.experience-box {
+.bg-box, .bg-box-rev {
     color: #fff;
     animation: fadein-up 2s;
 }
 
-.experience-box:nth-child(8n - 7) {
+.bg-box:nth-child(4n - 3), .bg-box-rev:nth-child(4n-2) {
     background-color: #56aabd;
     background: linear-gradient(to bottom right, #56aabd, #4f73c5);
 }
 
-.experience-box:nth-child(8n - 6) {
-    background-color: #3eb3a2;
-    background: linear-gradient(to bottom right, #3eb3a2, #3e8db3);
-}
-
-.experience-box:nth-child(8n - 5) {
+.bg-box:nth-child(4n - 2), .bg-box-rev:nth-child(4n - 3) {
     background-color: #d26899;
     background: linear-gradient(to bottom right, #d26899, #ca6868);
 }
 
-.experience-box:nth-child(8n - 4) {
+.bg-box:nth-child(4n - 1), .bg-box-rev:nth-child(4n - 1) {
+    background-color: #3eb3a2;
+    background: linear-gradient(to bottom right, #3eb3a2, #3e8db3);
+}
+
+.bg-box:nth-child(4n), .bg-box-rev:nth-child(4n) {
     background-color: #ad68d2;
     background: linear-gradient(to bottom right, #ae68d2, #8068ca);
 }
 
-.experience-box:nth-child(8n - 3) {
-    background-color: #8f99d8;
-}
-
-.experience-box:nth-child(8n - 2) {
-    background-color: #aa7cce;
-}
-
-.experience-box:nth-child(8n - 1) {
-    background-color: #da90c8;
-}
-
-.experience-box:nth-child(8n) {
-    background-color: #e681b1;
-}
-
-.experience-box:nth-child(4n), .experience-box:last-child {
-    margin-right: 0;
-}
-
-.experience-box h2 {
+.bg-box h2, .bg-box-rev h2 {
     margin-top: -100px;
     margin-bottom: 40px;
     text-align: center;
 }
 
-.experience-box h3 {
+.bg-box h3, .bg-box-rev h2 {
     margin-bottom: 5px;
 }
 
-.experience-container {
+.container {
     width: 80%;
     margin: 0 auto;
 }
 
 .experience-wrapper {
     margin-bottom: 5px;
+}
+
+.education-wrapper {
+    padding: 0 200px;
+}
+
+.education-title {
+    margin-bottom: 0 !important;
+}
+
+.education-container {
+    margin-top: 20px;
+}
+
+.additional-wrapper {
+    text-align: center;
 }
 
 .xp-category {
@@ -309,14 +305,10 @@
         margin: 0 auto;
     }
 
-    .experience-box h2 {
+    .bg-box h2 {
         margin-top: 0;
         margin-bottom: 15px;
         text-align: center;
-    }
-
-    .experience-container {
-        width: 60%;
     }
 
     .xp-category {

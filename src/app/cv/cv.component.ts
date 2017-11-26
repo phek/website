@@ -1,5 +1,5 @@
 import {Component, AfterViewInit} from '@angular/core';
-import {EXPERIENCES} from './experiences';
+import {EXPERIENCES, EDUCATION, ADDITIONAL} from './data';
 
 declare let particlesJS: any;
 declare let $: any;
@@ -20,11 +20,13 @@ export class CvComponent implements AfterViewInit {
     ];
 
     experiences: any = EXPERIENCES;
+    educations: any = EDUCATION;
+    additional: any = ADDITIONAL;
 
     ngAfterViewInit() {
         $('#fullpage').fullpage({
-            anchors: ['start', 'experiences'],
-            menu: '#menu'
+            menu: '#menu',
+            anchors: ['start', 'experiences', 'education', 'additional-skills']
         });
         particlesJS.load('particles-js', 'assets/scripts/particlesJS/particlesjs-config.json');
     }
