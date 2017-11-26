@@ -131,7 +131,7 @@
     background: linear-gradient(to bottom right, #ae68d2, #8068ca);
 }
 
-.bg-box h2, .bg-box-rev h2 {
+.bg-box h2 {
     margin-top: -100px;
     margin-bottom: 40px;
     text-align: center;
@@ -335,6 +335,10 @@
     .xp-text {
         display: block;
         text-align: right;
+    }
+
+    .education-wrapper {
+        padding: 0 20px;
     }
 
     .fp-controlArrow.fp-prev {
