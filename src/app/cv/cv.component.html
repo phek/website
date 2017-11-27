@@ -34,10 +34,10 @@
         </nav>
         <div id="header-content">
             <div id="header-text">
-                <h1>Philip Ekblom</h1>
-                <p>Computer Science Engineering student at KTH</p>
+                <h1 class="soft-delay">Philip</h1> <h1 class="medium-delay">Ekblom</h1>
+                <p  class="hard-delay">Computer Science Engineering student at KTH</p>
             </div>
-            <div id="portrait-wrapper">
+            <div id="portrait-wrapper" class="extreme-delay">
                 <img src="assets/images/portrait.jpg">
             </div>
         </div>
@@ -62,8 +62,8 @@
     <div class="section">
         <div *ngFor="let education of educations" class="slide bg-box-rev">
             <div class="container">
+                <h2>Education</h2>
                 <div class="education-wrapper">
-                    <h2>Education</h2>
                     <h3 class="education-title">{{education.school}}</h3>
                     <p class="education-subtitle">{{education.area}}</p>
                     <div class="education-container">

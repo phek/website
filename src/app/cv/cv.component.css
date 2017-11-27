@@ -72,7 +72,6 @@
     margin-bottom: 15px;
     display: inline-block;
     vertical-align: middle;
-    animation: fadein-up 2s;
 }
 
 #header-text p {
@@ -99,7 +98,6 @@
     border: 4px solid #fff;
     vertical-align: middle;
     box-shadow: 0px 0px 6px #000;
-    animation: fadein 2s;
 }
 
 #portrait-wrapper img {
@@ -248,6 +246,35 @@
     animation: fadein 5s;
 }
 
+.soft-delay, .medium-delay, .hard-delay, .extreme-delay {
+    opacity: 0;
+    animation: fadein-up 2s forwards;
+}
+
+#header-text h1 {
+    display: inline-block;
+}
+
+#header-text h1:first-child {
+    margin-right: 10px;
+}
+
+.soft-delay {
+    animation-delay: 0.5s;
+}
+
+.medium-delay {
+    animation-delay: 1.5s;
+}
+
+.hard-delay {
+    animation-delay: 2.5s;
+}
+
+.extreme-delay {
+    animation-delay: 3.5s;
+}
+
 @keyframes xp-rise {
     from {
         transform: translateX(-100%);
@@ -259,7 +286,10 @@
 
 @media only screen and (max-width: 750px) {
 
-    #menu a {display: none;}
+    #menu a {
+        display: none;
+    }
+
     #menu a.icon {
         float: right;
         display: block;
