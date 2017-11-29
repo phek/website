@@ -49,7 +49,22 @@ export class CvComponent implements AfterViewInit {
                 fadeScrollbars: true
             },
             menu: '#menu',
-            anchors: ['start', 'about-me', 'experiences', 'education']
+            anchors: ['start', 'about-me', 'experiences', 'education'],
+            slidesNavigation: true,
+            afterSlideLoad: function(){
+                $(".fp-slidesNav").fadeIn(300, function() {
+                    setTimeout(function () {
+                        $(".fp-slidesNav").fadeOut();
+                    }, 800);
+                });
+            },
+            afterLoad: function() {
+                $(".fp-slidesNav").fadeIn(300, function() {
+                    setTimeout(function () {
+                        $(".fp-slidesNav").fadeOut();
+                    }, 800);
+                });
+            }
         });
 
         /* On start */

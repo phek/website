@@ -59,6 +59,15 @@ h4 {
     }
 }
 
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes fadein-up {
     from {
         opacity: 0;
