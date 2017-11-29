@@ -106,7 +106,8 @@ html.fp-enabled,
 #fp-nav.left {
     left: 17px;
 }
-.fp-slidesNav{
+.fp-slidesNav {
+    text-align: center;
     position: absolute;
     z-index: 4;
     opacity: 1;
@@ -117,6 +118,7 @@ html.fp-enabled,
     right: 0;
     margin: 0 auto !important;
 }
+
 .fp-slidesNav.bottom {
     bottom: 17px;
 }
@@ -166,7 +168,7 @@ html.fp-enabled,
     height: 4px;
     width: 4px;
     border: 0;
-    background: #333;
+    background: #fff;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
