@@ -44,6 +44,10 @@ export class CvComponent implements AfterViewInit {
         let self = this;
 
         $('#fullpage').fullpage({
+            scrollOverflow: true,
+            scrollOverflowOptions: {
+                fadeScrollbars: true
+            },
             menu: '#menu',
             anchors: ['start', 'about-me', 'experiences', 'education']
         });
