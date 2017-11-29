@@ -7,6 +7,13 @@
                     <img src="assets/images/logo.png">
                 </div>
             </a>
+            <a href="#about-me">
+                <div class="menu-button">
+                    <p data-menuanchor="about-me">
+                        About Me
+                    </p>
+                </div>
+            </a>
             <a href="#experiences">
                 <div class="menu-button">
                     <p data-menuanchor="experiences">
@@ -21,29 +28,69 @@
                     </p>
                 </div>
             </a>
-            <a href="#additional-skills">
-                <div class="menu-button">
-                    <p data-menuanchor="additional-skills">
-                        Additional Skills
-                    </p>
-                </div>
-            </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <div>&#9776;</div>
             </a>
         </nav>
         <div id="header-content">
             <div id="header-text">
-                <h1 class="soft-delay">Philip</h1> <h1 class="medium-delay">Ekblom</h1>
-                <p  class="hard-delay">Computer Science Engineering student at KTH</p>
+                <h1 class="soft-delay">Philip</h1>
+                <h1 class="medium-delay">Ekblom</h1>
+                <p class="hard-delay">Computer Science Engineering student at KTH</p>
             </div>
             <div id="portrait-wrapper" class="extreme-delay">
                 <img src="assets/images/portrait.jpg">
             </div>
         </div>
     </div>
+    <div class="section about-me">
+        <div class="slide bg-box">
+            <div class="container">
+                <h2>About Me</h2>
+                <p class="item">
+                    I am currently studying at <span class="bold">KTH Kista</span> to become a <span class="bold">Computer Sience Engineer</span>.
+                </p>
+                <p class="item">
+                    At my spare time I like producing music, designing/painting in photoshop, develope games and
+                    work on different programming projects that interest me.
+                </p>
+                <p class="item">
+                    I specifically really like web development but I am into all kind of technology. Interesting IT
+                    project always gets me going.
+                </p>
+                <p class="item">
+                    I have a wide knowledge in IT, including some hardware, but my passion lies in software. I like
+                    testing new platforms and languages and I am always trying to keep an eye out for the newest
+                    technology, especially in web development.
+                </p>
+            </div>
+        </div>
+        <div class="slide bg-box">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:philip.ekblom@gmail.com" target="_blank">philip.ekblom@gmail.com</a></p>
+                </div>
+                <div class="item">
+                    <h3>Linked In</h3>
+                    <p><a href="https://www.linkedin.com/in/philip-ekblom/" target="_blank">www.linkedin.com/in/philip-ekblom/</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide bg-box">
+            <div class="container">
+                <h2>Additional Info</h2>
+                <p>I live in <span class="bold">Kista</span> in <span class="bold">Sweden</span>.</p>
+                <p>I am <span class="bold">23 years old</span>.</p>
+                <p>I speak fluent <span class="bold">Swedish</span> and <span class="bold">English</span>.</p>
+                <p>I have a <span class="bold">driving license</span> but do not own a car.</p>
+            </div>
+        </div>
+    </div>
     <div class="section">
-        <div *ngFor="let experience of experiences" class="slide bg-box">
+        <div *ngFor="let experience of experiences" class="slide bg-box mix1">
             <div class="container">
                 <h2>Experiences</h2>
                 <h3 class="xp-category">{{experience.category}}</h3>
@@ -60,7 +107,7 @@
         </div>
     </div>
     <div class="section">
-        <div *ngFor="let education of educations" class="slide bg-box-rev">
+        <div *ngFor="let education of educations" class="slide bg-box mix2">
             <div class="container">
                 <h2>Education</h2>
                 <div class="education-wrapper">
@@ -79,16 +126,6 @@
                         </li>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="section bg-box-rev">
-        <div class="container">
-            <div class="additional-wrapper">
-                <h2>Additional Skills</h2>
-                <p *ngFor="let skill of additional">
-                    {{skill}}
-                </p>
             </div>
         </div>
     </div>

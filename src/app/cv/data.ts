@@ -1,8 +1,3 @@
-export const ADDITIONAL = [
-    "Driving License",
-    "Fluent English"
-];
-
 export const EDUCATION = [
     {
         "school": "KTH Kista",
@@ -70,35 +65,6 @@ export const EXPERIENCES = [
         ]
     },
     {
-        "category": "Website tools",
-        "items": [
-            {
-                "title": "Sass & Stylus",
-                "xp": 3
-            },
-            {
-                "title": "Youtube API",
-                "xp": 2
-            },
-            {
-                "title": "Soundcloud API",
-                "xp": 2
-            },
-            {
-                "title": "Jquery UI",
-                "xp": 2
-            },
-            {
-                "title": "Google Translate API",
-                "xp": 2
-            },
-            {
-                "title": "Bootstrap",
-                "xp": 2
-            }
-        ]
-    },
-    {
         "category": "Programming languages",
         "items": [
             {
@@ -124,6 +90,78 @@ export const EXPERIENCES = [
             {
                 "title": "Scala",
                 "xp": 1
+            }
+        ]
+    },
+    {
+        "category": "Media programs",
+        "items": [
+            {
+                "title": "Microsoft Office",
+                "xp": 4
+            },
+            {
+                "title": "Adobe Photoshop",
+                "xp": 4
+            },
+            {
+                "title": "Adobe Illustrator",
+                "xp": 3
+            },
+            {
+                "title": "Adobe InDesign",
+                "xp": 2
+            },
+            {
+                "title": "Adobe After Effects",
+                "xp": 2
+            },
+            {
+                "title": "Sony Vegas Pro",
+                "xp": 2
+            }
+        ]
+    },
+    {
+        "category": "Game engines",
+        "items": [
+            {
+                "title": "Unity",
+                "xp": 3
+            },
+            {
+                "title": "Unreal Engine",
+                "xp": 2
+            }
+        ]
+    },
+    {
+        "category": "Modelling programs",
+        "items": [
+            {
+                "title": "Blender",
+                "xp": 3
+            },
+            {
+                "title": "Autodesk Maya",
+                "xp": 2
+            },
+            {
+                "title": "Cinema 4D",
+                "xp": 2
+            }
+        ]
+    },
+    {
+        "category": "Music production",
+        "items": [
+            {
+                "title": "FL Studio",
+                "xp": 4
+            },
+            {
+                "title": "Traktor Pro",
+                "xp": 2
             }
         ]
     }

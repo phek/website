@@ -2,8 +2,17 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     line-height: 25px;
-    font-size: 16px;
+    font-size: 17px;
     color: #404040;
+}
+
+a, a:hover, a:active, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4 {
@@ -26,6 +35,10 @@ h3 {
 h4 {
     font-size: 1.1em;
     font-weight: 400;
+}
+
+.bold {
+    font-weight: 500;
 }
 
 #loading_icon {
@@ -54,5 +67,16 @@ h4 {
     to {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+@keyframes fadein-right {
+    from {
+        opacity: 0;
+        transform: translateX(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
