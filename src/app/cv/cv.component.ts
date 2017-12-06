@@ -44,16 +44,26 @@ export class CvComponent implements AfterViewInit {
 
     openMenu() {
         let ele = $("#menu");
-        if (ele.hasClass("open")) {
-            ele.removeClass("open");
+        if (ele.hasClass("isOpen")) {
+            ele.removeClass("isOpen");
         } else {
-            ele.addClass("open");
+            ele.addClass("isOpen");
         }
+    }
+
+    static closeMenu() {
+        $("#menu").removeClass("isOpen");
     }
 
     ngAfterViewInit() {
         let windowHeight = $(window).height();
         let xpWidth = $(".xp-raiting:first").width();
+
+        /* On Scroll */
+        window.onscroll = function() {
+            CvComponent.closeMenu();
+            console.log("scrolling");
+        };
 
         /* Full-page */
         $('#fullpage').fullpage({
@@ -64,6 +74,10 @@ export class CvComponent implements AfterViewInit {
             menu: '#menu',
             anchors: ['start', 'about-me', 'experience', 'education'],
             slidesNavigation: true,
+            animateAnchor: false,
+            onLeave: function() {
+                CvComponent.closeMenu();
+            },
             afterSlideLoad: function () {
                 $(".fp-slidesNav").fadeIn(300, function () {
                     setTimeout(function () {
