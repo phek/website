@@ -35,7 +35,7 @@ export const EXPERIENCES = [
             },
             {
                 "title": "Javascript",
-                "xp": 3
+                "xp": 4
             },
             {
                 "title": "PHP",

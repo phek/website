@@ -105,12 +105,12 @@ export class CvComponent implements AfterViewInit {
         /* On resize */
         window.addEventListener('resize', function () {
             if (window.innerWidth > 750) {
-                if (CvComponent.pJS_getParticles() != 80) {
+                if (CvComponent.pJS_getParticles() != 60) {
                     CvComponent.pJS_destroy();
                     CvComponent.pJS_desktop();
                 }
             } else {
-                if (CvComponent.pJS_getParticles() == 80) {
+                if (CvComponent.pJS_getParticles() == 60) {
                     CvComponent.pJS_destroy();
                     CvComponent.pJS_mobile();
                 }
