@@ -50,6 +50,21 @@ h4 {
     margin-left: -100px;
 }
 
+.fp-scrollable {white-space:nowrap;}
+.fp-scrollable > * {white-space:normal;}
+
+.fp-scrollable:before,
+.fp-scrollable >* {display:inline-block; vertical-align:middle;}
+
+.fp-scrollable:before {content:"";  height:100%;}
+
+.fp-scrollable {word-spacing:-.25em;}
+.fp-scrollable > * {word-spacing:normal;}
+
+.fp-scroller {
+    width: 100%;
+}
+
 @keyframes fadein {
     0% {
         opacity: 0;
