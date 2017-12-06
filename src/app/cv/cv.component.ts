@@ -42,6 +42,15 @@ export class CvComponent implements AfterViewInit {
         pJSDom = [];
     }
 
+    openMenu() {
+        let ele = $("#menu");
+        if (ele.hasClass("open")) {
+            ele.removeClass("open");
+        } else {
+            ele.addClass("open");
+        }
+    }
+
     ngAfterViewInit() {
         let windowHeight = $(window).height();
         let xpWidth = $(".xp-raiting:first").width();
