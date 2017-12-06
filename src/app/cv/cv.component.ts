@@ -109,11 +109,11 @@ export class CvComponent implements AfterViewInit {
             duration: windowHeight
         })
             .on("enter", function () {
-                TweenMax.to("#header-content", 0.5, {opacity: 1, transform: "translateY(0px)"}).play();
+                TweenMax.to("#header-content", 0.5, {opacity: 1, y: 0}).play();
                 console.log("Entered Start");
             })
             .on("leave", function () {
-                TweenMax.to("#header-content", 0.5, {opacity: 0, transform: "translateY(100px)"}).play();
+                TweenMax.to("#header-content", 0.5, {opacity: 0, y: 100}).play();
             })
             .addTo(controller);
 
@@ -125,10 +125,10 @@ export class CvComponent implements AfterViewInit {
             duration: windowHeight
         })
             .on("enter", function () {
-                TweenMax.to("#about .container", 0.5, {opacity: 1, transform: "translateY(0px)"}).play();
+                TweenMax.to("#about .container", 0.5, {opacity: 1, y: 0}).play();
             })
             .on("leave", function () {
-                TweenMax.to("#about .container", 0.5, {opacity: 0, transform: "translateY(100px)"}).play();
+                TweenMax.to("#about .container", 0.5, {opacity: 0, y: 100}).play();
             })
             .addTo(controller);
 
@@ -140,14 +140,14 @@ export class CvComponent implements AfterViewInit {
             duration: windowHeight
         })
             .on("enter", function () {
-                TweenMax.to("#exp .container", 0.5, {opacity: 1, transform: "translateY(0px)"}).play();
+                TweenMax.to("#exp .container", 0.5, {opacity: 1, y: 0}).play();
                 TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: 0}).play();
                 TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: 0}).play();
                 TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: 0}).play();
                 TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: 0}).play();
             })
             .on("leave", function () {
-                TweenMax.to("#exp .container", 0.5, {opacity: 0, transform: "translateY(100px)"}).play();
+                TweenMax.to("#exp .container", 0.5, {opacity: 0, y: 100}).play();
                 TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: -xpWidth}).play();
                 TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: -xpWidth}).play();
                 TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: -xpWidth}).play();
@@ -157,7 +157,7 @@ export class CvComponent implements AfterViewInit {
 
         /* Exp -> Edu */
         new ScrollMagic.Scene({triggerElement: "#edu"})
-            .setTween("#edu .container", 0.5, {opacity: 1, transform: "translateY(0px)"})
+            .setTween("#edu .container", 0.5, {opacity: 1, y: 0})
             .addTo(controller);
     }
 
