@@ -102,63 +102,42 @@ export class CvComponent implements AfterViewInit {
         });
 
 
+        function newTween(triggerEle, toChange, onEnter?, onLeave?) {
+            new ScrollMagic.Scene({
+                triggerElement: triggerEle,
+                triggerHook: 0.5,
+                duration: windowHeight
+            })
+                .on("enter", function () {
+                    TweenMax.to(toChange, 0.5, {opacity: 1, y: 0}).play();
+                    if (onEnter) {
+                        onEnter();
+                    }
+                })
+                .on("leave", function () {
+                    TweenMax.to(toChange, 0.5, {opacity: 0, y: 100}).play();
+                    if (onLeave) {
+                        onLeave();
+                    }
+                })
+                .addTo(controller);
+        }
+
         /* Start */
-        new ScrollMagic.Scene({
-            triggerElement: "#header",
-            triggerHook: 0.5,
-            duration: windowHeight
-        })
-            .on("enter", function () {
-                TweenMax.to("#header-content", 0.5, {opacity: 1, y: 0}).play();
-                console.log("Entered Start");
-            })
-            .on("leave", function () {
-                TweenMax.to("#header-content", 0.5, {opacity: 0, y: 100}).play();
-            })
-            .addTo(controller);
-
-
-        /* About */
-        new ScrollMagic.Scene({
-            triggerElement: "#about",
-            triggerHook: 0.5,
-            duration: windowHeight
-        })
-            .on("enter", function () {
-                TweenMax.to("#about .container", 0.5, {opacity: 1, y: 0}).play();
-            })
-            .on("leave", function () {
-                TweenMax.to("#about .container", 0.5, {opacity: 0, y: 100}).play();
-            })
-            .addTo(controller);
-
-
-        /* Experience */
-        new ScrollMagic.Scene({
-            triggerElement: "#exp",
-            triggerHook: 0.5,
-            duration: windowHeight
-        })
-            .on("enter", function () {
-                TweenMax.to("#exp .container", 0.5, {opacity: 1, y: 0}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: 0}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: 0}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: 0}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: 0}).play();
-            })
-            .on("leave", function () {
-                TweenMax.to("#exp .container", 0.5, {opacity: 0, y: 100}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: -xpWidth}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: -xpWidth}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: -xpWidth}).play();
-                TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: -xpWidth}).play();
-            })
-            .addTo(controller);
-
-        /* Exp -> Edu */
-        new ScrollMagic.Scene({triggerElement: "#edu"})
-            .setTween("#edu .container", 0.5, {opacity: 1, y: 0})
-            .addTo(controller);
+        newTween("#header", "#header-content");
+        newTween("#about", "#about .container");
+        newTween("#exp", "#exp .container", function () {
+            TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: 0}).play();
+            TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: 0}).play();
+            TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: 0}).play();
+            TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: 0}).play();
+        }, function () {
+            TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: -xpWidth}).play();
+            TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: -xpWidth}).play();
+            TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: -xpWidth}).play();
+            TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: -xpWidth}).play();
+        });
+        newTween("#edu", "#edu .container");
     }
 
 }
