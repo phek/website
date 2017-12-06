@@ -61,10 +61,11 @@
     width: 100%;
     position: relative;
     color: #fff;
+    text-align: center;
 }
 
 #header-content {
-    text-align: center;
+    display: inline-block;
 }
 
 #header-text {
