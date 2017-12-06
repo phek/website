@@ -9,5 +9,5 @@ export const ROUTES = [
         path: '**',
         redirectTo: '',
         pathMatch: 'full'
-    },
+    }
 ];

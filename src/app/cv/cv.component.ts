@@ -1,9 +1,11 @@
 import {Component, AfterViewInit} from '@angular/core';
 import {EXPERIENCES, EDUCATION} from './data';
 
-declare let pJSDom: any;
-declare let particlesJS: any;
-declare let $: any;
+declare let pJSDom;
+declare let particlesJS;
+declare let $;
+declare let ScrollMagic;
+declare let TweenMax;
 
 @Component({
     selector: 'app-cv',
@@ -23,43 +25,45 @@ export class CvComponent implements AfterViewInit {
     experiences: any = EXPERIENCES;
     educations: any = EDUCATION;
 
-    pJS_desktop() {
+    static pJS_desktop() {
         particlesJS.load('particles-js', 'assets/scripts/particlesJS/particlesjs-config.json');
     }
 
-    pJS_mobile() {
+    static pJS_mobile() {
         particlesJS.load('particles-js', 'assets/scripts/particlesJS/particlesjs-mobile-config.json');
     };
 
-    pJS_getParticles() {
+    static pJS_getParticles() {
         return pJSDom[0].pJS.particles.number.value;
     }
 
-    pJS_destroy() {
+    static pJS_destroy() {
         pJSDom[0].pJS.fn.vendors.destroypJS();
         pJSDom = [];
     }
 
     ngAfterViewInit() {
-        let self = this;
+        let windowHeight = $(window).height();
+        let xpWidth = $(".xp-raiting:first").width();
 
+        /* Full-page */
         $('#fullpage').fullpage({
             scrollOverflow: true,
             scrollOverflowOptions: {
                 fadeScrollbars: true
             },
             menu: '#menu',
-            anchors: ['start', 'about-me', 'experiences', 'education'],
+            anchors: ['start', 'about-me', 'experience', 'education'],
             slidesNavigation: true,
-            afterSlideLoad: function(){
-                $(".fp-slidesNav").fadeIn(300, function() {
+            afterSlideLoad: function () {
+                $(".fp-slidesNav").fadeIn(300, function () {
                     setTimeout(function () {
                         $(".fp-slidesNav").fadeOut();
                     }, 800);
                 });
             },
-            afterLoad: function() {
-                $(".fp-slidesNav").fadeIn(300, function() {
+            afterLoad: function () {
+                $(".fp-slidesNav").fadeIn(300, function () {
                     setTimeout(function () {
                         $(".fp-slidesNav").fadeOut();
                     }, 800);
@@ -67,28 +71,94 @@ export class CvComponent implements AfterViewInit {
             }
         });
 
+        /* Particles JS */
         /* On start */
         if (window.innerWidth > 1100) {
-            self.pJS_desktop();
+            CvComponent.pJS_desktop();
         } else {
-            self.pJS_mobile();
+            CvComponent.pJS_mobile();
         }
 
         /* On resize */
         window.addEventListener('resize', function () {
             if (window.innerWidth > 750) {
-                if (self.pJS_getParticles() != 80) {
-                    self.pJS_destroy();
-                    self.pJS_desktop();
+                if (CvComponent.pJS_getParticles() != 80) {
+                    CvComponent.pJS_destroy();
+                    CvComponent.pJS_desktop();
                 }
             } else {
-                if (self.pJS_getParticles() == 80) {
-                    self.pJS_destroy();
-                    self.pJS_mobile();
+                if (CvComponent.pJS_getParticles() == 80) {
+                    CvComponent.pJS_destroy();
+                    CvComponent.pJS_mobile();
                 }
             }
+            windowHeight = $(window).height();
+            xpWidth = $(".xp-raiting:first").width();
         }, true);
 
+        /* Scroll Magic */
+        let controller = new ScrollMagic.Controller({
+            refreshInterval: 10
+        });
+
+
+        /* Start */
+        new ScrollMagic.Scene({
+            triggerElement: "#header",
+            triggerHook: 0.5,
+            duration: windowHeight
+        })
+            .on("enter", function () {
+                TweenMax.to("#header-content", 0.5, {opacity: 1, transform: "translateY(0px)"}).play();
+                console.log("Entered Start");
+            })
+            .on("leave", function () {
+                TweenMax.to("#header-content", 0.5, {opacity: 0, transform: "translateY(100px)"}).play();
+            })
+            .addTo(controller);
+
+
+        /* About */
+        new ScrollMagic.Scene({
+            triggerElement: "#about",
+            triggerHook: 0.5,
+            duration: windowHeight
+        })
+            .on("enter", function () {
+                TweenMax.to("#about .container", 0.5, {opacity: 1, transform: "translateY(0px)"}).play();
+            })
+            .on("leave", function () {
+                TweenMax.to("#about .container", 0.5, {opacity: 0, transform: "translateY(100px)"}).play();
+            })
+            .addTo(controller);
+
+
+        /* Experience */
+        new ScrollMagic.Scene({
+            triggerElement: "#exp",
+            triggerHook: 0.5,
+            duration: windowHeight
+        })
+            .on("enter", function () {
+                TweenMax.to("#exp .container", 0.5, {opacity: 1, transform: "translateY(0px)"}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: 0}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: 0}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: 0}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: 0}).play();
+            })
+            .on("leave", function () {
+                TweenMax.to("#exp .container", 0.5, {opacity: 0, transform: "translateY(100px)"}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n) .xp-raiting div", 0.5, {x: -xpWidth}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n + 1) .xp-raiting div", 1.2, {x: -xpWidth}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n + 2) .xp-raiting div", 1.5, {x: -xpWidth}).play();
+                TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: -xpWidth}).play();
+            })
+            .addTo(controller);
+
+        /* Exp -> Edu */
+        new ScrollMagic.Scene({triggerElement: "#edu"})
+            .setTween("#edu .container", 0.5, {opacity: 1, transform: "translateY(0px)"})
+            .addTo(controller);
     }
 
 }

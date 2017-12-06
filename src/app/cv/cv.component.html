@@ -14,10 +14,10 @@
                     </p>
                 </div>
             </a>
-            <a href="#experiences">
+            <a href="#experience">
                 <div class="menu-button">
-                    <p data-menuanchor="experiences">
-                        Experiences
+                    <p data-menuanchor="experience">
+                        Experience
                     </p>
                 </div>
             </a>
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="section about-me">
+    <div id="about" class="section">
         <div class="slide bg-box">
             <div class="container">
                 <div class="border-box">
@@ -94,11 +94,11 @@
             </div>
         </div>
     </div>
-    <div class="section">
+    <div id="exp" class="section">
         <div *ngFor="let experience of experiences" class="slide bg-box mix1">
             <div class="container">
                 <div class="box">
-                    <h2>Experiences</h2>
+                    <h2>Experience</h2>
                     <h3 class="xp-category">{{experience.category}}</h3>
                     <div class="experience-wrapper" *ngFor="let item of experience.items">
                         <div class="xp-title">
@@ -113,7 +113,7 @@
             </div>
         </div>
     </div>
-    <div class="section">
+    <div id="edu" class="section">
         <div *ngFor="let education of educations" class="slide bg-box mix2">
             <div class="container">
                 <div class="box">

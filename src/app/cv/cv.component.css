@@ -175,8 +175,13 @@
     margin-bottom: 20px;
 }
 
-.about-me {
+#about {
     text-align: center;
+}
+
+#header-content, #about .container, #exp .container, #edu .container {
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .experience-wrapper {
@@ -220,24 +225,7 @@
     height: 100%;
     width: 25%;
     float: left;
-    animation: xp-rise 3s forwards ease;
     transform: translateX(-300%);
-}
-
-.experience-wrapper:nth-child(4n) .xp-raiting div {
-    animation-delay: 0.3s;
-}
-
-.experience-wrapper:nth-child(4n - 1) .xp-raiting div {
-    animation-delay: 0.8s;
-}
-
-.experience-wrapper:nth-child(4n - 2) .xp-raiting div {
-    animation-delay: 1s;
-}
-
-.experience-wrapper:nth-child(4n - 3) .xp-raiting div {
-    animation-delay: 1.2s;
 }
 
 .xp-raiting div:last-child {
@@ -319,15 +307,6 @@
 
 .extreme-delay {
     animation-delay: 3.5s;
-}
-
-@keyframes xp-rise {
-    from {
-        transform: translateX(-300%);
-    }
-    to {
-        transform: translateX(0%);
-    }
 }
 
 @media only screen and (max-width: 750px) {
