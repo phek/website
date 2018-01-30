@@ -33,12 +33,17 @@ h3 {
 }
 
 h4 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .bold {
     font-weight: 500;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 #loading_icon {
@@ -50,16 +55,32 @@ h4 {
     margin-left: -100px;
 }
 
-.fp-scrollable {white-space:nowrap;}
-.fp-scrollable > * {white-space:normal;}
+.fp-scrollable {
+    white-space: nowrap;
+}
+
+.fp-scrollable > * {
+    white-space: normal;
+}
 
 .fp-scrollable:before,
-.fp-scrollable >* {display:inline-block; vertical-align:middle;}
+.fp-scrollable > * {
+    display: inline-block;
+    vertical-align: middle;
+}
 
-.fp-scrollable:before {content:"";  height:100%;}
+.fp-scrollable:before {
+    content: "";
+    height: 100%;
+}
 
-.fp-scrollable {word-spacing:-.25em;}
-.fp-scrollable > * {word-spacing:normal;}
+.fp-scrollable {
+    word-spacing: -.25em;
+}
+
+.fp-scrollable > * {
+    word-spacing: normal;
+}
 
 .fp-scroller {
     width: 100%;
