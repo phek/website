@@ -62,7 +62,6 @@ export class CvComponent implements AfterViewInit {
         /* On Scroll */
         window.onscroll = function() {
             CvComponent.closeMenu();
-            console.log("scrolling");
         };
 
         /* Full-page */
@@ -72,7 +71,7 @@ export class CvComponent implements AfterViewInit {
                 fadeScrollbars: true
             },
             menu: '#menu',
-            anchors: ['start', 'about-me', 'experience', 'education'],
+            anchors: ['start', 'about-me', 'experience', 'education', 'website-architecture'],
             slidesNavigation: true,
             animateAnchor: false,
             onLeave: function() {
@@ -146,7 +145,7 @@ export class CvComponent implements AfterViewInit {
                 .addTo(controller);
         }
 
-        /* Start */
+        /* Animation */
         newTween("#header", "#header-content");
         newTween("#about", "#about .container");
         newTween("#exp", "#exp .container", function () {
@@ -161,6 +160,7 @@ export class CvComponent implements AfterViewInit {
             TweenMax.to(".experience-wrapper:nth-child(4n + 3) .xp-raiting div", 1.8, {x: -xpWidth}).play();
         });
         newTween("#edu", "#edu .container");
+        newTween("#arch", "#arch .container");
     }
 
 }

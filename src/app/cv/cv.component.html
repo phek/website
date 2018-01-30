@@ -28,6 +28,13 @@
                     </p>
                 </div>
             </a>
+            <a href="#website-architecture">
+                <div class="menu-button">
+                    <p data-menuanchor="website-architecture">
+                        Website Architecture
+                    </p>
+                </div>
+            </a>
             <a href="javascript:void(0);" class="icon" (click)="openMenu()">
                 <div>&#9776;</div>
             </a>
@@ -134,6 +141,64 @@
                             </li>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="arch" class="section">
+        <div class="slide bg-box">
+            <div class="container">
+                <h2>Website Architecture</h2>
+                <div class="architecture-wrapper">
+                    <h3>Frontend</h3>
+                    <p class="item">The frontend is built in <span class="bold underline">AngularJS</span>.<br>
+                        <span class="bold underline">Angular CLI</span> is used to build and maintain the Angular
+                        components. I also use this to deploy and optimize the website for github-pages.<br>
+                        <span class="bold underline">Webpack</span> is used to bundle the website.
+                    </p>
+                    <h4>Additional javascript libraries</h4>
+                    <p>
+                        <span class="bold underline">ParticlesJS</span> is used for the particle animations on the first
+                        page.
+                    </p>
+                    <p>
+                        <span class="bold underline">FullpageJS</span> is used to handle the full-page
+                        functionality of the
+                        page.
+                    </p>
+                    <p>
+                        <span class="bold underline">TweenMax</span> combined with <span class="bold underline">ScrollMagic</span>
+                        is used
+                        to create
+                        event-based animations.
+                    </p>
+                    <p>
+                        <span class="bold underline">Jquery</span> is used for general functionality.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide bg-box">
+            <div class="container">
+                <h2>Website Architecture</h2>
+                <div class="education-wrapper">
+                    <h3>Backend</h3>
+                    <p class="item">
+                        The frontend is built independently of a backend, I can therefore go between
+                        different backends easily.
+                    </p>
+                    <p class="item">
+                        Right now I host the frontend directly on the <span class="bold underline">Github-pages</span>.
+                        I do this because it's free but also because I can deploy changes very fast and easily with
+                        Github-pages. This means I technically don't have a backend though, I therefore load all data
+                        from JSON files instead of a database. I can also get this data from a RESTful API,
+                        but this will both be slower and require extra hosting which is not necessary at the moment.
+                    </p>
+                    <p class="item">
+                        My real backend is created in <span class="bold underline">NodeJS</span> with a <span
+                        class="bold underline">MongoDB</span> database. I plan to use this later if I implement more
+                        advanced functionality that requires a backend or a database.
+                    </p>
                 </div>
             </div>
         </div>
