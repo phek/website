@@ -150,11 +150,44 @@
             <div class="container">
                 <h2>Website Architecture</h2>
                 <div class="architecture-wrapper">
+                    <p class="item">
+                        In this section I will talk about the architecture of the website. I will also list the
+                        different frameworks and libraries I used for creating it.
+                    </p>
+                    <p class="item">
+                        The website and architecture is created from scratch by me. My goal was to create an
+                        advanced but very development friendly architecture. I wanted it to be scalable between
+                        different team sizes and project complexities. I have designed it so I easily can add new
+                        developers and modules/websites to the project as time goes by.
+                    </p>
+                    <p class="item">
+                        The current architecture should work for a one person team, a big company, simple websites like
+                        this CV and a large complex system.
+                    </p>
+                    <p class="item">
+                        All layers are created in Javascript. This means that you can use <span class="bold underline">NPM</span>
+                        to manage all layers and the only language developers needs to know is Javascript.
+                        The javascript-stack I am using is also known as the <span
+                        class="bold underline">MEAN-Stack</span>, this stack works very well with
+                        ReactJS too if you wish to use that instead of AngularJS.
+                    </p>
+                    <p class="item">
+                        Feel free to email me questions or criticism about the architecture. I will gladly receive
+                        feedback and talk more about it with people that are interested.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide bg-box">
+            <div class="container">
+                <h2>Website Architecture</h2>
+                <div class="architecture-wrapper">
                     <h3>Frontend</h3>
                     <p class="item">The frontend is built in <span class="bold underline">AngularJS</span>.<br>
                         <span class="bold underline">Angular CLI</span> is used to build and maintain the Angular
                         components. I also use this to deploy and optimize the website for github-pages.<br>
-                        <span class="bold underline">Webpack</span> is used to bundle the website.
+                        <span class="bold underline">Webpack</span> is used to bundle the website, this will be handled
+                        automatically by Angular CLI.
                     </p>
                     <h4>Additional javascript libraries</h4>
                     <p>
@@ -162,15 +195,12 @@
                         page.
                     </p>
                     <p>
-                        <span class="bold underline">FullpageJS</span> is used to handle the full-page
-                        functionality of the
-                        page.
+                        <span class="bold underline">FullpageJS</span> is used to handle the full-page functionality of
+                        the page.
                     </p>
                     <p>
                         <span class="bold underline">TweenMax</span> combined with <span class="bold underline">ScrollMagic</span>
-                        is used
-                        to create
-                        event-based animations.
+                        is used to create event-based animations.
                     </p>
                     <p>
                         <span class="bold underline">Jquery</span> is used for general functionality.
@@ -184,15 +214,16 @@
                 <div class="education-wrapper">
                     <h3>Backend</h3>
                     <p class="item">
-                        The frontend is built independently of a backend, I can therefore go between
-                        different backends easily.
+                        The frontend is built independently of a backend, I can therefore switch between different
+                        backends easily.
                     </p>
                     <p class="item">
                         Right now I host the frontend directly on the <span class="bold underline">Github-pages</span>.
                         I do this because it's free but also because I can deploy changes very fast and easily with
                         Github-pages. This means I technically don't have a backend though, I therefore load all data
                         from JSON files instead of a database. I can also get this data from a RESTful API,
-                        but this will both be slower and require extra hosting which is not necessary at the moment.
+                        but this will both be slower and require extra hosting which is not necessary in the current
+                        state of the website.
                     </p>
                     <p class="item">
                         My real backend is created in <span class="bold underline">NodeJS</span> with a <span

@@ -44,7 +44,7 @@ export const EXPERIENCES = [
         ]
     },
     {
-        "category": "Javascript tools",
+        "category": "Javascript",
         "items": [
             {
                 "title": "Jquery",
@@ -61,6 +61,18 @@ export const EXPERIENCES = [
             {
                 "title": "NodeJS",
                 "xp": 2
+            },
+            {
+                "title": "MongoDB",
+                "xp": 2
+            },
+            {
+                "title": "Socket.io",
+                "xp": 3
+            },
+            {
+                "title": "JWT",
+                "xp": 2
             }
         ]
     },
@@ -69,11 +81,11 @@ export const EXPERIENCES = [
         "items": [
             {
                 "title": "Java",
-                "xp": 4
+                "xp": 3
             },
             {
                 "title": "C/C++",
-                "xp": 2
+                "xp": 1
             },
             {
                 "title": "Erlang",

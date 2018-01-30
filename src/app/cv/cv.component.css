@@ -311,7 +311,7 @@
     animation-delay: 3.5s;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 900px) {
 
     .border-box {
         padding: 0;
@@ -427,7 +427,7 @@
         text-align: right;
     }
 
-    .education-wrapper {
+    .education-wrapper, .architecture-wrapper {
         padding: 0 20px;
     }
 
