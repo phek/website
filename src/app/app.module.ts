@@ -9,7 +9,7 @@ import {CvService} from './cv/cv.service';
 import {AppComponent} from './app.component';
 import {ROUTES} from './app.routes';
 import {CvComponent} from './cv/cv.component';
-import { LoopPipe } from './tools/loop.pipe';
+import {LoopPipe} from './tools/loop.pipe';
 
 @NgModule({
     declarations: [
